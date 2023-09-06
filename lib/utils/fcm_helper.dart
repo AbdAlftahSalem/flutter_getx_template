@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:logger/logger.dart';
-import '../app/data/local/my_shared_pref.dart';
+import '../app/data/local/shared_pref.dart';
 import 'awesome_notifications_helper.dart';
 
 class FcmHelper {
@@ -63,7 +63,7 @@ class FcmHelper {
     try {
       var token = await messaging.getToken();
       if(token != null){
-        MySharedPref.setFcmToken(token);
+        SharedPref.setFcmToken(token);
         _sendFcmTokenToServer();
       }else {
         // retry generating token
@@ -78,7 +78,7 @@ class FcmHelper {
   /// this method will be triggered when the app generate fcm
   /// token successfully
   static _sendFcmTokenToServer(){
-    var token = MySharedPref.getFcmToken();
+    var token = SharedPref.getFcmToken();
     // TODO SEND FCM TOKEN TO SERVER
   }
 

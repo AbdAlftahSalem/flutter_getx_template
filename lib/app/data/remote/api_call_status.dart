@@ -4,6 +4,4 @@ enum ApiCallStatus {
   error,
   empty,
   holding,
-  cache,
-  refresh,
 }

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'app/data/local/shared_pref.dart';
-import 'app/routes/app_pages.dart';
+import 'app/routes/app_routes.dart';
 import 'config/theme/my_theme.dart';
 import 'config/translations/localization_service.dart';
 import 'utils/awesome_notifications_helper.dart';

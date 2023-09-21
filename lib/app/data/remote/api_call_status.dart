@@ -3,6 +3,6 @@ enum ApiCallStatus {
   success,
   error,
   empty,
-  hold,
+  holding,
   networkError,
 }

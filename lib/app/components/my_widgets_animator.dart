@@ -36,7 +36,7 @@ class ApiHandleUiWidget extends StatelessWidget {
       return emptyWidget;
     } else if (apiCallStatus == ApiCallStatus.networkError) {
       return networkError;
-    } else if (apiCallStatus == ApiCallStatus.hold) {
+    } else if (apiCallStatus == ApiCallStatus.holding) {
       return holdWidget;
     }
     return successWidget;

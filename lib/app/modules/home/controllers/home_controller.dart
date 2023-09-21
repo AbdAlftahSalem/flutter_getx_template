@@ -9,7 +9,7 @@ class HomeController extends GetxController {
   List<dynamic>? data;
 
   // api call status
-  ApiCallStatus apiCallStatus = ApiCallStatus.holding;
+  ApiCallStatus apiCallStatus = ApiCallStatus.hold;
 
   // getting data from api
   getData() async {

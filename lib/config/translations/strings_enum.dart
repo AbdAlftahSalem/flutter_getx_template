@@ -15,4 +15,8 @@ class Strings {
   static const String retry = 'retry';
   static const String internetError = 'internet error';
   static const String enterValidData = 'Enter valid data';
+  static const String emptyData = 'Data is empty ...';
+  static const String networkError = 'Network Error';
+  static const String someThingErrorPleaseTryAgain =
+      'Some thing error please try again';
 }

@@ -1,18 +1,18 @@
-import 'package:autotrade/core/constants/strings/string_keys.dart';
-import 'package:autotrade/core/constants/themes/color_manger.dart';
-import 'package:autotrade/view/widget/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:getx_skeleton/config/translations/strings_enum.dart';
+
+import 'custom_text.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String? hintTxt;
   final String? label;
   final String? initValue;
-  final Widget? prefexIcon;
+  final Widget? prefixIcon;
   final Widget? suffixIcon;
-  final Function? onPressedPrefexIcon;
+  final Function? onPressedPrefixIcon;
   final VoidCallback? onPressedSuffixIcon;
   final Function? onChange;
   final TextInputType? keyboardType;
@@ -31,14 +31,14 @@ class CustomTextFormField extends StatelessWidget {
     super.key,
     this.hintTxt,
     this.label = "",
-    this.onPressedPrefexIcon,
+    this.onPressedPrefixIcon,
     this.keyboardType,
     this.controller,
     this.onChange,
     this.obscureText = false,
     this.maxLines = 1,
     this.minLines = 1,
-    this.prefexIcon,
+    this.prefixIcon,
     this.fillColor,
     this.horizontalPadding,
     this.verticalPadding,
@@ -60,7 +60,7 @@ class CustomTextFormField extends StatelessWidget {
       controller: controller,
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return StringKeys.instance.pleaseEnterValidData.tr;
+          return Strings.enterValidData;
         }
         return null;
       },
@@ -71,9 +71,8 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: (hintTxt ?? "").tr,
         label: CustomText(
-          txt: label,
+          txt: label ?? "",
           fontSize: 14.sp,
-          color: ColorManager.instance.secSecWriteLightColor,
           overflow: TextOverflow.ellipsis,
         ),
         fillColor: fillColor ?? Theme.of(context).colorScheme.surface,
@@ -90,28 +89,10 @@ class CustomTextFormField extends StatelessWidget {
             color: Theme.of(context).colorScheme.onSurface,
           ),
         ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.r),
-          borderSide: BorderSide(
-            color: ColorManager.instance.redColor,
-          ),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.r),
-          borderSide: BorderSide(
-            color: ColorManager.instance.redColor,
-          ),
-        ),
-        hintStyle: TextStyle(
-          fontFamily: "Inter",
-          color: ColorManager.instance.secSecWriteLightColor,
-          fontSize: 8.sp,
-          overflow: TextOverflow.ellipsis,
-        ),
-        prefixIcon: prefexIcon,
+        prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
       ),
-      onChanged: (value) => onChange == null ? (){}: onChange!(value),
+      onChanged: (value) => onChange ?? () {},
       keyboardType: keyboardType,
       obscureText: obscureText!,
     );

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 // TODO add your dark theme colors palette
-class DarkThemeColors
-{
+class DarkThemeColors {
   // PRIMARY
   static const Color primaryColor = Color(0xFFFF8C00);
 
@@ -31,7 +30,7 @@ class DarkThemeColors
   //TEXT
   static const Color bodyTextColor = Colors.white70;
   static const Color displayTextColor = Colors.white;
-  static const Color bodySmallTextColor =  Color(0xff7C7C7C);
+  static const Color bodySmallTextColor = Color(0xff7C7C7C);
   static const Color hintTextColor = Color(0xff686868);
 
   //chip
@@ -56,5 +55,4 @@ class DarkThemeColors
   static const Color employeeListItemNameColor = Colors.white;
   static const Color employeeListItemSubtitleColor = Color(0xFFEDEDED);
   static const Color employeeListItemIconsColor = Color(0xFFEDEDED);
-
 }

@@ -12,8 +12,10 @@ class SharedPref {
 
   // STORING KEYS
   static const String _fcmTokenKey = 'fcm_token';
+  static const String _userToken = 'user_token';
   static const String _currentLocalKey = 'current_local';
   static const String _lightThemeKey = 'is_theme_light';
+  static const String _passOnBoarding = 'pass_on_boarding';
 
   /// init get storage services
   static Future<void> init() async {
@@ -53,6 +55,22 @@ class SharedPref {
 
   /// get authorization token
   static String? getFcmToken() => _sharedPreferences.getString(_fcmTokenKey);
+
+  // save on boarding
+  static Future<void> setOnBoarding(bool onBoarding) =>
+      _sharedPreferences.setBool(_passOnBoarding, onBoarding);
+
+  // get on boarding
+  static bool getOnBoarding() =>
+      _sharedPreferences.getBool(_passOnBoarding) ?? false;
+
+  /// save authorization token
+  static Future<void> setAuthorizationToken(String token) =>
+      _sharedPreferences.setString(_userToken, token);
+
+  /// get authorization token
+  static String? getAuthorizationToken() =>
+      _sharedPreferences.getString(_userToken);
 
   /// clear all data from shared pref
   static Future<void> clear() async => await _sharedPreferences.clear();

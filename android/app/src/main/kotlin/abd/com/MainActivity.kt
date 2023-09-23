@@ -1,4 +1,4 @@
-package com.emad.beltaje.getx_skeleton.getx_skeleton
+package abd.com
 
 import io.flutter.embedding.android.FlutterActivity
 

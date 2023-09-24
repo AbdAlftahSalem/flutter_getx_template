@@ -6,7 +6,7 @@ import '../../../data/remote/base_client.dart';
 
 class HomeController extends GetxController {
   // hold data coming from api
-  List<dynamic>? data;
+  List<Map<dynamic, dynamic>> data = [];
 
   // api call status
   ApiCallStatus apiCallStatus = ApiCallStatus.holding;
@@ -15,8 +15,8 @@ class HomeController extends GetxController {
   getData() async {
     // *) perform api call
     await BaseClient.safeApiCall(
-      Constants.todosApiUrl, // url
-      RequestType.get, // request type (get,post,delete,put)
+      Constants.todosApiUrl,
+      RequestType.get,
       onLoading: () {
         // *) indicate loading state
         apiCallStatus = ApiCallStatus.loading;

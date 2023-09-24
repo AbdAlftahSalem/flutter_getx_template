@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:getx_skeleton/config/translations/strings_enum.dart';
 
-import '../custom_widget/custom_text.dart';
+import '../custom_text.dart';
 
 class SomeThingErrorWidget extends StatelessWidget {
   const SomeThingErrorWidget({Key? key}) : super(key: key);

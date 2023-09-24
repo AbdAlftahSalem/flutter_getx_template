@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 
 import '../data/remote/api_call_status.dart';
-import '../shared_widget/api_widgets/emapty_data_widget.dart';
-import '../shared_widget/api_widgets/loading_widget.dart';
-import '../shared_widget/api_widgets/network_error_widget.dart';
-import '../shared_widget/api_widgets/some_thing_error.dart';
+import 'api_widgets/empty_data_widget.dart';
+import 'api_widgets/loading_widget.dart';
+import 'api_widgets/network_error_widget.dart';
+import 'api_widgets/some_thing_error.dart';
 
 class ApiHandleUiWidget extends StatelessWidget {
   final Widget loadingWidget;

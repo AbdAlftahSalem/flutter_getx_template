@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_skeleton/config/translations/strings_enum.dart';
 
-import '../custom_widget/custom_text.dart';
+import '../custom_text.dart';
 
 class NetworkErrorWidget extends StatelessWidget {
   const NetworkErrorWidget({Key? key}) : super(key: key);

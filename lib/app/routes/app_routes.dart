@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
+
+import '../modules/home/home_binding.dart';
+import '../modules/home/home_view.dart';
 import 'routes.dart';
-import '/app/routes/routes.dart';
 
 class AppPages {
   static final routes = [

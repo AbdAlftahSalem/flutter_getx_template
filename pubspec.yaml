@@ -14,11 +14,8 @@ dependencies:
   flutter_screenutil: ^5.8.4 # make app responsive
 
   dio: ^5.2.1+1 # for api requests
-  http_mock_adapter: ^0.4.4 # mocking dio for testing
   pretty_dio_logger: ^1.3.1 # for dio api logging and debugging
 
-  hive: ^2.2.3  # local database (SQFlite replacement)
-  hive_flutter: ^1.1.0 # make it easy to use hive (no need for path provider)
   shared_preferences: ^2.2.0 # shared preferences persistence key value store
 
   firebase_core: ^2.14.0 # to initialize firebase services
@@ -37,9 +34,6 @@ dependencies:
 dev_dependencies:
   mockito:
   flutter_lints:
-  build_runner:  # generate dart files
-  hive_generator: # generate hive files
-  pub_semver: ^2.1.4 # helper to generate hive models
 
   integration_test:
     sdk: flutter

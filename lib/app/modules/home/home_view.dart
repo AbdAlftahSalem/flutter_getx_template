@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_skeleton/app/components/api_handle_ui_widget.dart';
 import 'package:getx_skeleton/app/components/custom_text.dart';
 
-import '../controllers/home_controller.dart';
+import 'home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);

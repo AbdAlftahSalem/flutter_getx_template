@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getx_skeleton/config/translations/strings_enum.dart';
 
+import '../../../config/translations/strings_enum.dart';
 import '../custom_text.dart';
 
 class EmptyDataWidget extends StatelessWidget {
